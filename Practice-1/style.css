@@ -1,0 +1,34 @@
+@keyframes gradientAnimation {
+  0%{
+    background-position: 0% 0%;
+  }
+  100%{
+    background-position: 0% 100%;
+  }
+ 
+}
+
+@keyframes colorChangeAnimation {
+  0% {
+    background: linear-gradient(45deg, #000, #8a2be2);
+  }
+  50% {
+    background: linear-gradient(45deg, #8a2be2, #000);
+  }
+  100% {
+    background: linear-gradient(45deg, #000, #8a2be2);
+  }
+}
+.color-changing-div {
+  background: linear-gradient(45deg, #000, #8a2be2);
+  background-size: 200% 200%;
+  animation: colorChangeAnimation 4s infinite;
+}
+
+
+
+.animated-div{
+  background: linear-gradient(45deg, #8a2be2,#000);
+  background-size: 200% 200%;
+  animation: gradientAnimation 4s infinite;
+}
