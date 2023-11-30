@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section id="up"></section>
+  <section id="down"></section>
+  <section id="left"></section>
+  <section id="right"></section>
+  <div class="mov" id="animatedElement"></div>
+  <script>
+    function moveElement() {
+      // Get the dimensions of the viewport
+      const viewportWidth = window.innerWidth;
+      const viewportHeight = window.innerHeight;
+
+      // Get a random position within the viewport
+      const randomX = Math.random() * (viewportWidth - 50); // Subtract 50 to keep the element within the viewport
+      const randomY = Math.random() * (viewportHeight - 50);
+
+      // Apply the random position to the element
+      const element = document.getElementById('animatedElement');
+      element.style.transform = `translate(${randomX}px, ${randomY}px)`;
+
+      // Call the moveElement function again after a delay
+      setTimeout(moveElement, 2000); // Change the delay as needed
+    }
+
+    // Initial call to start the animation
+    moveElement();
+  </script>
+</body>
+</html>
